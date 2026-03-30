@@ -161,6 +161,7 @@ class RoPEAttention(nn.Module):
         self.has_cls_first = has_cls_first
         self.interpolate_rope = interpolate_rope
         self.pretrained_patch_size = patch_size
+        self.pretrained_grid_size = grid_size
         if patch_size == 14:
             self.pretrained_grid_size = int(252 / patch_size)
         elif patch_size == 16:
